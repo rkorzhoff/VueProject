@@ -6,7 +6,7 @@ export default [
   },
   {
     title: 'Графический планшет WACOM One Small',
-    price: 3649,
+    price: 3650,
     image: '/new-img/wacom-one-small.jpg',
   },
   {
