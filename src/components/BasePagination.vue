@@ -1,16 +1,7 @@
 <template>
   <ul class="catalog__pagination pagination">
     <li class="pagination__item">
-      <a
-        class="pagination__link pagination__link--arrow "
-        aria-label="Предыдущая страница"
-        :class="{ 'pagination__link--disabled': isFirstPage === true }"
-        @click.prevent="
-          {
-            paginate(prevPage);
-          }
-        "
-      >
+      <a class="pagination__link pagination__link--arrow " aria-label="Предыдущая страница" :class="{ 'pagination__link--disabled': isFirstPage === true }" @click.prevent="paginate(page - 1)">
         <svg width="8" height="14" fill="currentColor">
           <use xlink:href="#icon-arrow-left"></use>
         </svg>
@@ -22,7 +13,7 @@
       </a>
     </li>
     <li class="pagination__item">
-      <a class="pagination__link pagination__link--arrow" href="#" aria-label="Следующая страница" :class="{ 'pagination__link--disabled': isLastPage === true }" @click.prevent="paginate(nextPage)">
+      <a class="pagination__link pagination__link--arrow" href="#" aria-label="Следующая страница" :class="{ 'pagination__link--disabled': isLastPage === true }" @click.prevent="paginate(page + 1)">
         <svg width="8" height="14" fill="currentColor">
           <use xlink:href="#icon-arrow-right"></use>
         </svg>
@@ -42,14 +33,6 @@ export default {
     pages() {
       return Math.ceil(this.count / this.perPage);
     },
-    nextPage() {
-      if (this.page === this.pages) return this.pages;
-      return this.page + 1;
-    },
-    prevPage() {
-      if (this.page === 1) return 1;
-      return this.page - 1;
-    },
     isFirstPage() {
       return this.page === 1;
     },
@@ -59,7 +42,9 @@ export default {
   },
   methods: {
     paginate(page) {
-      this.$emit('paginate', page);
+      if (page > 0 && page <= this.pages) {
+        this.$emit('paginate', page);
+      }
     },
   },
 };
