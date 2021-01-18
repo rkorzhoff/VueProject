@@ -5,7 +5,8 @@ export default [
     title: 'Apple EarPods',
     price: 890,
     image: '/new-img/earpods.jpg',
-    colorId: [2, 3, 1],
+    colorId: [5, 4],
+    color: ['background-color: #73B6EA', 'background-color: #FFBE15'],
   },
   {
     id: 2,
@@ -13,7 +14,7 @@ export default [
     title: 'Графический планшет WACOM One Small',
     price: 3650,
     image: '/new-img/wacom-one-small.jpg',
-    colorId: [4, 6, 7],
+    colorId: [5, 1],
   },
   {
     id: 3,
@@ -21,7 +22,7 @@ export default [
     title: 'Электронная книга Amazon Kindle PaperWhite',
     price: 10500,
     image: '/new-img/amazon-kindle-paperwhite.jpg',
-    colorId: [5, 1],
+    colorId: [5, 7],
   },
   {
     id: 4,
@@ -29,7 +30,6 @@ export default [
     title: 'Умные часы Amazfit GTS',
     price: 7810,
     image: '/new-img/amazfit.jpg',
-    colorId: [1, 3, 5],
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export default [
     title: 'Геймпад Sony DualSense',
     price: 4948,
     image: '/new-img/dualsense.jpg',
-    colorId: [3, 4, 5],
+    colorId: 4,
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export default [
     title: 'Cyberpunk 2077',
     price: 1190,
     image: '/new-img/cyberpunk.jpg',
-    colorId: [2, 4, 7],
+    colorId: 5,
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export default [
     title: 'Планшет Samsung Galaxy Tab A7',
     price: 16890,
     image: '/new-img/galaxytab.jpg',
-    colorId: [1, 3, 6],
+    colorId: 6,
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export default [
     title: 'Умные часы Samsung Galaxy Watch',
     price: 14190,
     image: '/new-img/galaxywatch.jpg',
-    colorId: [2, 4, 5],
+    colorId: 7,
   },
   {
     id: 9,
@@ -69,6 +69,6 @@ export default [
     title: 'Беспроводные наушники JBL Tune 120 TWS',
     price: 2498,
     image: '/new-img/jbl.jpg',
-    colorId: [1, 3, 4],
+    colorId: 8,
   },
 ];
