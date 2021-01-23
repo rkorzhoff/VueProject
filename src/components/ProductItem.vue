@@ -11,35 +11,17 @@
     <span class="catalog__price">{{ product.price }}</span>
 
     <ul class="colors colors--black">
-      <li class="colors__item" v-for="colorId in product" :key="colorId">
+      <li class="colors__item" v-for="color in product.colors" :key="color.id">
         <label class="colors__label">
-          <input class="colors__radio sr-only" type="radio" :value="colorId" />
-          <span class="colors__value" v-for="color in colors" :key="color" :style="color.color"> </span>
+          <input class="colors__radio sr-only" type="radio" :value="color.id" v-model="color.color" />
+          <span class="colors__value" :style="{ backgroundColor: color.color }"> </span>
         </label>
       </li>
     </ul>
   </li>
 </template>
 <script>
-import colors from '../data/colors';
-
 export default {
-  data() {
-    return {
-      productColor: 0,
-    };
-  },
   props: ['product'],
-
-  computed: {
-    colors() {
-      return colors;
-    },
-  },
-  watch: {
-    product(color) {
-      this.productColor = color;
-    },
-  },
 };
 </script>
