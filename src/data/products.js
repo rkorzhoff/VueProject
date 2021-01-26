@@ -7,8 +7,19 @@ export default [
     image: '/new-img/earpods.jpg',
     colors: [
       {
+        id: 5,
+        title: 'Оранженый',
+        code: '#FF6B00',
+      },
+      {
+        id: 3,
+        title: 'Серый',
+        code: '#939393',
+      },
+      {
         id: 1,
-        color: '#73B6EA',
+        title: 'Синий',
+        code: '#73B6EA',
       },
     ],
   },
@@ -21,7 +32,17 @@ export default [
     colors: [
       {
         id: 2,
-        color: '#FFBE15',
+        code: '#FFBE15',
+      },
+      {
+        id: 3,
+        title: 'Серый',
+        code: '#939393',
+      },
+      {
+        id: 7,
+        title: 'Черный',
+        code: '#222',
       },
     ],
   },
@@ -33,8 +54,18 @@ export default [
     image: '/new-img/amazon-kindle-paperwhite.jpg',
     colors: [
       {
+        id: 1,
+        title: 'Синий',
+        code: '#73B6EA',
+      },
+      {
         id: 3,
-        color: '#939393',
+        code: '#939393',
+      },
+      {
+        id: 5,
+        title: 'Оранженый',
+        code: '#FF6B00',
       },
     ],
   },
@@ -47,15 +78,15 @@ export default [
     colors: [
       {
         id: 1,
-        color: '#73B6EA',
+        code: '#73B6EA',
       },
       {
         id: 2,
-        color: '#FFBE15',
+        code: '#FFBE15',
       },
       {
         id: 3,
-        color: '#939393',
+        code: '#939393',
       },
     ],
   },
@@ -67,16 +98,18 @@ export default [
     image: '/new-img/dualsense.jpg',
     colors: [
       {
-        id: 1,
-        color: '#73B6EA',
+        id: 4,
+        title: 'Зеленый',
+        code: '#8BE000',
       },
       {
-        id: 2,
-        color: '#FFBE15',
+        id: 6,
+        title: 'Белый',
+        code: '#FFF',
       },
       {
         id: 3,
-        color: '#939393',
+        code: '#939393',
       },
     ],
   },
@@ -89,15 +122,16 @@ export default [
     colors: [
       {
         id: 1,
-        color: '#73B6EA',
+        code: '#73B6EA',
       },
       {
         id: 2,
-        color: '#FFBE15',
+        code: '#FFBE15',
       },
       {
-        id: 3,
-        color: '#939393',
+        id: 4,
+        title: 'Зеленый',
+        code: '#8BE000',
       },
     ],
   },
@@ -109,16 +143,17 @@ export default [
     image: '/new-img/galaxytab.jpg',
     colors: [
       {
-        id: 1,
-        color: '#73B6EA',
+        id: 5,
+        title: 'Оранженый',
+        code: '#FF6B00',
       },
       {
         id: 2,
-        color: '#FFBE15',
+        code: '#FFBE15',
       },
       {
         id: 3,
-        color: '#939393',
+        code: '#939393',
       },
     ],
   },
@@ -131,15 +166,16 @@ export default [
     colors: [
       {
         id: 1,
-        color: '#73B6EA',
+        code: '#73B6EA',
       },
       {
         id: 2,
-        color: '#FFBE15',
+        code: '#FFBE15',
       },
       {
-        id: 3,
-        color: '#939393',
+        id: 7,
+        title: 'Черный',
+        code: '#222',
       },
     ],
   },
@@ -152,15 +188,16 @@ export default [
     colors: [
       {
         id: 1,
-        color: '#73B6EA',
+        code: '#73B6EA',
       },
       {
         id: 2,
-        color: '#FFBE15',
+        code: '#FFBE15',
       },
       {
-        id: 3,
-        color: '#939393',
+        id: 4,
+        title: 'Зеленый',
+        code: '#8BE000',
       },
     ],
   },

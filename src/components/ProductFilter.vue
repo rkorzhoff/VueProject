@@ -1,7 +1,6 @@
 <template>
   <aside class="filter">
     <h2 class="filter__title">Фильтры</h2>
-
     <form class="filter__form form" action="#" method="get" @submit.prevent="submit">
       <fieldset class="form__block">
         <legend class="form__legend">Цена</legend>
@@ -14,7 +13,6 @@
           <span class="form__value">До</span>
         </label>
       </fieldset>
-
       <fieldset class="form__block">
         <legend class="form__legend">Категория</legend>
         <label class="form__label form__label--select">
@@ -24,19 +22,10 @@
           </select>
         </label>
       </fieldset>
-
       <fieldset class="form__block">
         <legend class="form__legend">Цвет</legend>
-        <ul class="colors">
-          <li class="colors__item" v-for="color in colors" :key="color.id">
-            <label class="colors__label">
-              <input class="colors__radio sr-only" type="radio" :value="color.id" v-model.number="currentColorId" />
-              <span class="colors__value" :style="{ backgroundColor: color.color }"> </span>
-            </label>
-          </li>
-        </ul>
+        <ProductColors :colors="colorSet" :current-color.sync="currentColor" />
       </fieldset>
-
       <fieldset class="form__block">
         <legend class="form__legend">Объемб в ГБ</legend>
         <ul class="check-list">
@@ -109,24 +98,29 @@
 
 <script>
 import categories from '../data/categories';
-import colors from '../data/colors';
+import colorSet from '../data/colorsSet';
+import ProductColors from './ProductColors.vue';
 
 export default {
+  name: 'ProductFilter',
   data() {
     return {
       currentPriceFrom: 0,
       currentPriceTo: 0,
       currentCategoryId: 0,
-      currentColorId: 0,
+      currentColor: '',
     };
   },
-  props: ['priceFrom', 'priceTo', 'categoryId', 'colorId'],
+  components: {
+    ProductColors,
+  },
+  props: ['priceFrom', 'priceTo', 'categoryId', 'colors'],
   computed: {
     categories() {
       return categories;
     },
-    colors() {
-      return colors;
+    colorSet() {
+      return colorSet;
     },
   },
   watch: {
@@ -139,8 +133,8 @@ export default {
     categoryId(value) {
       this.currentCategoryId = value;
     },
-    colorId(value) {
-      this.currentColorId = value;
+    colors(value) {
+      this.currentColor = value;
     },
   },
   methods: {
@@ -148,13 +142,13 @@ export default {
       this.$emit('update:priceFrom', this.currentPriceFrom);
       this.$emit('update:priceTo', this.currentPriceTo);
       this.$emit('update:categoryId', this.currentCategoryId);
-      this.$emit('update:colorId', this.currentColorId);
+      this.$emit('update:colors', this.currentColor);
     },
     reset() {
       this.$emit('update:priceFrom', 0);
       this.$emit('update:priceTo', 0);
       this.$emit('update:categoryId', 0);
-      this.$emit('update:colorId', 0);
+      this.$emit('update:colors', '');
     },
   },
 };
