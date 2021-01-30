@@ -1,4 +1,4 @@
-# skillbox-project
+# store-project
 
 ## Project setup
 ```
