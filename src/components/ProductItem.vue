@@ -8,10 +8,18 @@
     </h3>
     <span class="catalog__price"> {{ product.price | numberFormat }} ₽ </span>
 
-    <ProductColors :colors="product.colors" :current-color.sync="productCurrentColor" />
+    <ProductColors class="product-page__colors" :colors="product.colors" :current-color.sync="productCurrentColor" />
   </li>
 </template>
-
+<style>
+.product-page__colors .colors__value:hover {
+  border: 1px solid #fff;
+}
+.product-page__colors .colors__value:hover::before {
+  content: '';
+  border: 1px solid #000;
+}
+</style>
 <script>
 import gotoPage from '@/helpers/gotoPage';
 import numberFormat from '@/helpers/numberFormat';
